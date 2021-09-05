@@ -53,68 +53,56 @@ h2 {
 /*  Partie 1 : Accueil */
 
 header{
-    height: 25em ;
+    height: 28em ;
     background-image: url('jay-mantri-TFyi0QOx08c-unsplash.jpg');
     background-position : center ;
 }
 
-/* nav{
-    background-color: coral;
-} */
 
 
 ul{
-    width: 90%;
-    height: 40px;
+    width: 95%;
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-    /* background-color: aqua; */
-    
+    flex-wrap: wrap;   
 }
 
 li{
-    /* background-color: deeppink; */
+    margin-top: 20px;
     text-decoration: none;
     list-style: none;
-    width: 1em;
     text-align: end;
-    padding: 1em;   
+    list-style: none; 
 }
 
 
-li  p{
+li  a{
+    text-decoration: none;
     display: inline-block;
     font-size: 1em;
     border-radius: 25px;
     padding: 0.8em  1.25em;
     color: #ffffff;
-    background-color: rgba(128, 127, 127, 0.452);
+    background-color: rgba(96, 94, 94, 0.452);
 }
 
 
-li  p:hover {
+li  a:hover {
     display: inline-block;
     font-size: 1em;
     border-radius: 25px;
     padding: 0.8em  1.25em;
     color: #ffffff;
-    background-color: rgba(70, 68, 68, 0.452);
+    background-color: rgba(96, 94, 94, 0.452);
 }
 
 
 
 
-li:nth-child(1){
-    flex-grow: 11;
-}
-
-li:nth-child(2){
-  flex-grow: 1;
-    
-}
-
+li:nth-child(1){flex-grow: 15;}
+li:nth-child(2){flex-grow: 1;}
 li:nth-child(3){flex-grow: 1;}
+li:nth-child(4){flex-grow: 1;}
 
 
 .img{
@@ -155,9 +143,6 @@ a img {
 
 
 /*  PRESENTATION  */
-
-
-
 
 
 .presentation {
@@ -232,7 +217,6 @@ a img {
 }
 
 .text-skills + p {
-    
     text-align: center;
 }
 
@@ -411,11 +395,26 @@ svg .circle06:nth-child(2) {
 
 .works-container{
     padding: 2em;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-
-}
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 10px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "project1-description project2-description project3-description"
+        "project4-description project5-description .";
+    }
+    
+    .project1-description { grid-area: project1-description; }
+    
+    .project2-description { grid-area: project2-description; }
+    
+    .project3-description { grid-area: project3-description; }
+    
+    .project4-description { grid-area: project4-description; }
+    
+    .project5-description { grid-area: project5-description; }
+    
 
 
 .prjct{
